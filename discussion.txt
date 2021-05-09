@@ -1,0 +1,131 @@
+Discussion
+----------
+
+1. Which would be the most efficient data structure for a data set with the
+   following requirements:
+
+  - frequently removing and adding items to the beginning of the data structure
+
+    Both singly linked and double linked lists have a runtime of O(1) for adding and removing
+    items If you want to insert at the beginning of the list, you just make the new list head
+    the node you want to insert, and link it to the previous list head. whereas for removing an item if you have a reference
+    to the node you want to remove you can remove that item so both would be efficient.
+
+  - frequently removing and adding items to the end of the data structure
+
+    Double linked lists would be efficient you can reference the tail to be new Node that you
+    want to insert and if you have a reference to the item you want to remove from the end you can effeciently remove it
+    by pointing to the next item and skipping the item to be removed. Both has a runtime complexity of O(1).
+
+
+
+  - rarely indexing and searching
+
+    Python list would be more efficient as you can easily index into a Python list and it has a runtime of O(1)
+    whereas singly linked and doubly linked lists have a runtime of O(n).
+
+  A. A Python list B. Singly linked list C. Doubly linked list
+
+  Explain your answer.
+
+
+
+
+
+
+
+
+2. Which would be the most efficient data structure for a data set with the
+   following requirements:
+
+  - order is unimportant
+     Dictionary because order is not important in a dictionary as items are accessed via keys
+     and not with their position in a dictionary.
+
+  -frequently adding and removing items
+    Dictionary beacuse runtime O(1)
+
+  - frequently looking up items
+    Dictionary
+
+  A. A Python list  B. A Dictionary  C. Deque  D. Binary Search Tree
+
+  Explain your answer.
+
+
+
+
+
+
+
+
+3. Explain why looking up, adding elements, and removing elements from a
+   dictionary or hash map are all O(1) operations.
+
+Asnwer: Because we will use the hash of an element to calculate index in the hashmap and will use
+that index to retrieve a value.Otherwise you will have to go through the array one by one to find the element.
+
+
+
+
+
+
+4. Explain why removing elements from or adding elements to an arbitrary
+   location in a Python list are O(n) operations.
+  Because the whole list will haas to be shifted in order to add or remove an element
+  to an arbitraray location.
+
+
+
+
+
+
+5. What is the correct runtime for:
+
+  - Bubble Sort?
+    O(n*2)
+
+  - Quicksort?
+    Average n*log(n)
+    worst O(n*2)
+
+  - Merge Sort?
+    n*log(n)
+
+  - Insertion Sort?
+    O(n)
+
+
+6. What is the difference between a tree and a graph?
+  Graphs are like trees, except they can contain loops (“cycles”).
+  the relationships can be directed or un-directed
+
+
+
+
+
+7. Using the Python implementation of Quicksort from the instructions:
+
+  Given the list [8, 4, 1, 6, 5, 2, 7, 3]:
+  When this function is initially called, what are the values of:
+
+    - lst -  [8, 4, 1, 6, 5, 2, 7, 3]
+
+    - pivot - 5  mid = int(len(lst) / 2)  # index at half the list
+
+    - lo -  [4, 1, 2, 3]
+
+    - hi -  [8, 6, 7]
+
+
+
+  When the quicksort is first called recursively on the `lo` list, what are the
+  values of:
+
+  - lst - [4, 1, 2 , 3]
+
+  - pivot - 2
+
+  - lo -  [1 ]
+
+  - hi -  [4, 3]
